@@ -1,0 +1,47 @@
+/* Applying radial gradient background color */
+.radial-gradient {
+  background-color: var(--slate-50) !important;
+}
+
+/* Styling links and text with primary class */
+a,
+.text-primary {
+  color: var(--emerald-500) !important;
+}
+
+a:hover,
+.text-primary:hover {
+  color: var(--emerald-600) !important;
+}
+
+/* Styling primary buttons */
+.btn-primary {
+  background-color: var(--emerald-500) !important;
+  border-color: var(--emerald-500) !important;
+  color: var(--white) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--emerald-600) !important;
+  border-color: var(--emerald-600) !important;
+  color: var(--white) !important;
+}
+
+/* Styling checked form check inputs with primary class */
+.form-check-input.primary:checked {
+  background-color: var(--emerald-500) !important;
+  border-color: var(--emerald-500) !important;
+}
+
+.form-control:focus {
+  background-color: var(--slate-50) !important;
+  color: var(--emerald-600) !important;
+  border-color: var(--emerald-600) !important;
+}
+
+::selection {
+  background-color: var(--emerald-500);
+  color: white; /* Or any other color you prefer */
+}

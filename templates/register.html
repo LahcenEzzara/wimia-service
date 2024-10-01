@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Wimchat - S'inscrire{% endblock %}
+
+{% block content %}
+
+<div class="card-body">
+    <div class="text-nowrap logo-img text-center d-block py-3 w-100">
+        <img src="{% static 'images/wimchat.png' %}" width="48" alt="Wimchat Logo">
+    </div>
+    <p class="text-center">Inscrivez-vous pour discuter avec Nous!</p>
+
+    {% if error_message %}
+    <div class="alert alert-danger" role="alert">{{ error_message }}</div>
+    {% endif %}
+
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="mb-3">
+            <label for="username" class="form-label">Nom d'utilisateur</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Adresse Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="password1" class="form-label">Mot de passe</label>
+            <input type="password" class="form-control" id="password1" name="password1" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="password2" class="form-label">Confirmer le mot de
+                passe</label>
+            <input type="password" class="form-control" id="password2" name="password2" required>
+        </div>
+
+        <button class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" type="submit">S'inscrire</button>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <p class="fs-4 mb-0 fw-bold">Vous avez déjà un compte ?</p>
+            <a class="text-primary fw-bold ms-2" href="{% url 'login' %}">Se connecter</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

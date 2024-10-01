@@ -1,0 +1,11 @@
+Django
+python-dotenv
+mysqlclient
+torch
+pandas
+transformers
+langchain
+langchain-community
+langchain-openai
+faiss-cpu
+openai
