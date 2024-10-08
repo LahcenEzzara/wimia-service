@@ -19,6 +19,7 @@ from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 from .models import Chat
 
+
 # Load environment variables
 load_dotenv()
 
